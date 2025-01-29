@@ -14,5 +14,14 @@ public class Main {
 
         System.out.println(new Json().write(new Object[] { 1, 2, 3 }));
         System.out.println(new Json().write(new Object[] { "Hello", "World" }));
+
+        System.out.println(new Json().write(new Person()));
     }
+}
+
+
+class Person {
+    public String getFirstName() { return "John"; }
+    public String getLastName() { return "Doe"; }
+    public int getAge() { return 30; }
 }

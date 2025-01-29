@@ -13,6 +13,9 @@ public class RunMeBaby {
 	public static void main(String[] args) {
 		System.out.println(new Json().write(new TestCase()));
 		// {"string":"xoxo","integer":42,"null":null}
+
+		System.out.println(new Json().write(new TestCase()));
+
 	}
 
 }
