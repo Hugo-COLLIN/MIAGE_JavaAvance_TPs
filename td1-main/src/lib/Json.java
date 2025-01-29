@@ -1,5 +1,7 @@
 package lib;
 
+import java.util.Arrays;
+
 public class Json {
 
 	public String write(Object instance) {
@@ -13,7 +15,26 @@ public class Json {
 		if (Number.class.isAssignableFrom(instance.getClass()))
 			return instance.toString();
 
-		throw new UnsupportedOperationException("Type de données non-géré");
+        switch (instance) {
+            case String s -> {
+                return "\"" + instance + "\"";
+            }
+            case Boolean b -> {
+                return instance.toString();
+            }
+            case Object[] objects -> {
+				return "["
+						+ Arrays.stream(objects)
+								.map(this::write)
+								.reduce((a, b) -> a + ", " + b)
+								.orElse("")
+						+ "]";
+            }
+            default -> {
+            }
+        }
+
+        throw new UnsupportedOperationException("Type de données non-géré");
 	}
 
 }
