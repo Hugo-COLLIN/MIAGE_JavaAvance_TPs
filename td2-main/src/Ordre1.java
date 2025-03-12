@@ -1,4 +1,4 @@
-public class Main {
+public class Ordre1 {
     public static void main(String[] args) {
 //        Thread hello = Thread.startVirtualThread(new Hello());
         Thread hello = new Thread(new Hello());
@@ -25,3 +25,5 @@ class World extends Thread {
         System.out.println("world");
     }
 }
+
+// Résultat consistant
