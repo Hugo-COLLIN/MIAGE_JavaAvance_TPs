@@ -1,6 +1,8 @@
+package ordre;
+
 public class Ordre1 {
     public static void main(String[] args) {
-//        Thread hello = Thread.startVirtualThread(new Hello());
+//        Thread hello = Thread.startVirtualThread(new ordre.Hello());
         Thread hello = new Thread(new Hello());
 
         Thread world = new World();

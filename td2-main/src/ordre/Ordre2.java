@@ -1,3 +1,5 @@
+package ordre;
+
 public class Ordre2 {
     public static void main(String[] args) throws InterruptedException {
         String message = "hello world :-\\)";
