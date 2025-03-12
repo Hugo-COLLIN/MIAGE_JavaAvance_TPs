@@ -9,7 +9,7 @@ public class MutexCompte {
         System.out.println("solde début : " + compte.consulter());
         IntStream.range(0, 42).mapToObj(i -> new Thread(() -> {
             // ... diverses opérations sur le compte ...
-            compte.retirer(1);
+//            compte.retirer(1);
         })).forEach(t -> t.start());
         System.out.println("solde fin : " + compte.consulter());
 
@@ -23,6 +23,8 @@ public class MutexCompte {
         public int consulter() { return solde; }
     }
 }
+
+// <!> Ordre d'exécution global indéfini
 
 // Les threads ne sont pas terminés et exécutés au même moment, certaines valeurs sont
 // prises alors que le thread qui traitait la donnée n'a pas encore fini son opération.
