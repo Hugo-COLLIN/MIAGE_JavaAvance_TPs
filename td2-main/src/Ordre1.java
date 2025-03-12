@@ -26,4 +26,4 @@ class World extends Thread {
     }
 }
 
-// Résultat consistant
+// Résultat consistant à 99%
