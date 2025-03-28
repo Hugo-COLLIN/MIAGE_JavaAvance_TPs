@@ -23,7 +23,7 @@ public class PokemonRegistry {
         this.endpointUrl = endpointUrl;
     }
 
-    public List<Pokemon> fetch() throws URISyntaxException, IOException {
+    public List<Pokemon> fetch() {
         try {
             final URL url = new URI(this.endpointUrl).toURL();
             try (final Reader reader = new InputStreamReader(url.openStream(), "UTF-8");
