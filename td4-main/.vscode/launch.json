@@ -1,0 +1,30 @@
+{
+    // Utilisez IntelliSense pour en savoir plus sur les attributs possibles.
+    // Pointez pour afficher la description des attributs existants.
+    // Pour plus d'informations, visitez : https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Morpion",
+            "request": "launch",
+            "mainClass": "Morpion",
+            "projectName": "td-numero-cinq"
+        },
+        {
+            "type": "java",
+            "name": "RunInUiThread",
+            "request": "launch",
+            "mainClass": "RunInUiThread",
+            "projectName": "demo"
+        },
+        {
+            "type": "java",
+            "name": "Morpion",
+            "request": "launch",
+            "mainClass": "Morpion",
+            "projectName": "javafx",
+            "vmArgs": "-XstartOnFirstThread"
+        }
+    ]
+}
