@@ -1,10 +1,9 @@
 
-import java.util.Collections;
 import java.util.List;
 
 import pokemon.domain.Pokemon;
 import pokemon.services.PokemonFetcher;
-import pokemon.services.PokemonRestFetcher;
+import pokemon.services.impl.PokemonRestFetcher;
 
 public class TestMe {
     public static void main(String[] args) throws Exception {
@@ -13,8 +12,6 @@ public class TestMe {
             @Override
             public List<Pokemon> fetch() {
                 PokemonRestFetcher prf = new PokemonRestFetcher();
-
-
                 return prf.fetch();
             }
         };
