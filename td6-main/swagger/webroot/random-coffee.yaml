@@ -1,0 +1,48 @@
+openapi: 3.0.0
+info:
+  title: Random Coffee
+  version: "0.0.1"
+tags:
+  - name: public
+    description: Public API
+paths:
+  /api/random-coffee:
+    get:
+      tags:
+        - public
+      summary: Get a random coffee (with image and price in BTC)
+      operationId: random_coffee
+      responses:
+        '200':
+          description: result
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  allOf:
+                  - $ref: '#/components/schemas/Coffee'
+        '500':
+          description: internal error
+components:
+  schemas:
+    Coffee:
+      type: object
+      required:
+        - name
+        - imageUrl
+        - btcPrice
+      properties:
+        name:
+          type: string
+          description: Beverage name.
+          example: "Black Coffee"
+        imageUrl:
+          type: string
+          format: uri
+          description: Illustration image.
+          example: "https://placehold.co/600x400"
+        btcPrice:
+          type: number
+          description: |
+            Price in bitcoins.
